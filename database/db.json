@@ -1,0 +1,34 @@
+{
+  "students": [
+    {
+      "name": "Nigar",
+      "surname": "Əliyeva",
+      "age": 22,
+      "isStudent": true
+    },
+    {
+      "name": "Elvin",
+      "surname": "Həsənov",
+      "age": 19,
+      "isStudent": true
+    },
+    {
+      "name": "Səbinə",
+      "surname": "Quliyeva",
+      "age": 21,
+      "isStudent": false
+    },
+    {
+      "name": "Rəşad",
+      "surname": "Bayramov",
+      "age": 23,
+      "isStudent": true
+    },
+    {
+      "name": "Aysel",
+      "surname": "Məmmədova",
+      "age": 20,
+      "isStudent": true
+    }
+  ]
+}
