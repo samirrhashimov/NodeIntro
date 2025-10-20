@@ -35,17 +35,17 @@ app.get('/students', (req, res) => {
 app.get('/students/:index', (req, res) => {
   const index = parseInt(req.params.index, 10);
   if (Number.isNaN(index) || index < 1) {
-    return res.status(400).json({ success: false, message: 'Yanlış index' });
+    return res.status(400).json({ success: false, message: 'Yanliş index' });
   }
 
   const db = readDB();
   const idx = index - 1;
 
   if (idx < 0 || idx >= db.students.length) {
-    return res.status(404).json({ success: false, message: `Index: ${index} ilə tələbə tapılmadı` });
+    return res.status(404).json({ success: false, message: `Index: ${index} ilə tələbə tapilmadi` });
   }
 
-  res.status(200).json({ success: true, message: 'Tələbə uğurla tapıldı', data: db.students[idx] });
+  res.status(200).json({ success: true, message: 'Tələbə uğurla tapildi', data: db.students[idx] });
 });
 
 // 3. POST student
@@ -76,7 +76,7 @@ app.delete('/students/:index', (req, res) => {
   const idx = index - 1;
 
   if (idx < 0 || idx >= db.students.length) {
-    return res.status(404).json({ success: false, message: `${index} ID-li ilə tələbə tapılmadı` });
+    return res.status(404).json({ success: false, message: `${index} ID-li ilə tələbə tapilmadi` });
   }
 
   const deletedStudent = db.students.splice(idx, 1)[0];
@@ -97,7 +97,7 @@ app.put('/students/:index', (req, res) => {
   const studentIndex = index - 1;
 
   if (studentIndex < 0 || studentIndex >= db.students.length) {
-    return res.status(404).json({ success: false, message: `Index: ${index} ilə tələbə tapılmadı` });
+    return res.status(404).json({ success: false, message: `Index: ${index} ilə tələbə tapilmadi` });
   }
 
   db.students[studentIndex] = {
@@ -126,7 +126,7 @@ app.patch('/students/:index', (req, res) => {
   const studentIndex = index - 1;
 
   if (studentIndex < 0 || studentIndex >= db.students.length) {
-    return res.status(404).json({ success: false, message: `${index} ID-li tələbə tapılmadı` });
+    return res.status(404).json({ success: false, message: `${index} ID-li tələbə tapilmadi` });
   }
 
   db.students[studentIndex] = {
